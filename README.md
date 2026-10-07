@@ -248,8 +248,3 @@ something outside the firmware.
 [`.github/workflows/build_binaries.yaml`](.github/workflows/build_binaries.yaml)
 calls QMK's official reusable workflows. Pushing to a GitHub fork with
 Actions enabled builds the firmware there.
-
-## Status
-
-This keymap has never been compiled and never been flashed. Run
-`qmk compile` before trusting it.
