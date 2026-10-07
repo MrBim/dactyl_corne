@@ -27,10 +27,10 @@ if your build differs.
 
 ## Layout
 
-![Keymap layer diagram](Screenshot%202026-08-05%20at%2010.38.10%20pm.png)
+![Keymap layer diagram](docs/keymap-layers.png)
 
-Generated from [`keymap-diagram.html`](keymap-diagram.html) — open that in
-a browser and screenshot it to produce a new image.
+Generated from [`docs/keymap-layers.html`](docs/keymap-layers.html) — open that in
+a browser, screenshot it, and save the image as `docs/keymap-layers.png`.
 
 Each key is divided into quadrants, one per layer: Base (blue), Sym
 (red), Dir (green), Num (orange). A quadrant is coloured only where that
