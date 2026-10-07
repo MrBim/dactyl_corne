@@ -66,9 +66,10 @@ The top-left key toggles the mouse layer; the top-right is Delete.
 
 ### Sym
 
-Numbers on the upper row, then brackets, braces, parens and the common
-programming symbols under the right hand, with `\`, `&`, `+`, `-`, `=`,
-backtick/tilde, underscore, `#`, `%` and pipe under the left.
+F1–F10 on the number row, numbers on the row below it, then brackets,
+braces, parens and the common programming symbols under the right hand,
+with `\`, `&`, `+`, `-`, `=`, backtick/tilde, underscore, `#`, `%` and
+pipe under the left.
 
 ### Dir
 
@@ -81,6 +82,9 @@ Y and P send editor fold and unfold (`⌘K ⌘[` and `⌘K ⌘]`).
 
 Numpad under the right hand — `1`–`9` and `0` in a keypad arrangement,
 with `=`/`+`, `-` and `.`.
+
+The 4 and 5 keys on the number row send `⇧⌘4` and `⇧⌘5`, the macOS
+screen capture shortcuts.
 
 ### Mouse
 

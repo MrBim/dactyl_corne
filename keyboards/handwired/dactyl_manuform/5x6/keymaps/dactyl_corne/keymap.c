@@ -264,7 +264,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_SYM] = LAYOUT_5x6(
-        _______,    _______,      _______,    _______,          _______,          _______,                      _______,       _______,       _______,      _______,        _______,       _______,
+        _______,    KC_F1,        KC_F2,      KC_F3,            KC_F4,            KC_F5,                        KC_F6,         KC_F7,         KC_F8,        KC_F9,          KC_F10,        _______,
         _______,    TD(TD_N1),    TD(TD_N2),  TD(TD_N3),        TD(TD_N4),        TD(TD_N5),                    TD(TD_N6),     TD(TD_N7),     TD(TD_N8),    TD(TD_N9),      TD(TD_N0),     _______,
         _______,    KC_BSLS,      S(KC_7),    S(KC_EQL),        KC_MINS,          KC_EQL,                       TD(TD_LTGT),   TD(TD_BRACE),  TD(TD_PAREN), TD(TD_BRKT),    _______,       _______,
         _______,    TD(TD_GRV),   S(KC_MINS), S(KC_3),          S(KC_5),          S(KC_BSLS),                   S(KC_DOT),     KC_F12,        _______,      _______,        _______,       _______,
@@ -286,7 +286,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_NUM] = LAYOUT_5x6(
-        _______,    _______,      _______,    _______,          _______,          _______,                      _______,       _______,       _______,      _______,        _______,       _______,
+        _______,    _______,      _______,    _______,          LSFT(LGUI(KC_4)), LSFT(LGUI(KC_5)),             _______,       _______,       _______,      _______,        _______,       _______,
         _______,    _______,      _______,    _______,          _______,          _______,                      TD(TD_EQPLUS), KC_KP_1,       KC_KP_2,      KC_KP_3,        S(KC_5),       _______,
         _______,    _______,      _______,    KC_DEL,           RSFT(RALT(KC_F)), _______,                      KC_KP_0,       KC_KP_4,       KC_KP_5,      KC_KP_6,        _______,       _______,
         _______,    _______,      _______,    LSFT(LGUI(KC_C)), _______,          _______,                      KC_MINS,       KC_KP_7,       KC_KP_8,      KC_KP_9,        KC_DOT,        _______,
