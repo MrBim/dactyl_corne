@@ -33,6 +33,10 @@
 
 #include QMK_KEYBOARD_H
 
+#if !defined(COMBO_ONLY_FROM_LAYER) || COMBO_ONLY_FROM_LAYER != 0
+#    error "COMBO_ONLY_FROM_LAYER is not 0 - combos would follow the active layer"
+#endif
+
 enum layers {
     _BASE,
     _SYM,
