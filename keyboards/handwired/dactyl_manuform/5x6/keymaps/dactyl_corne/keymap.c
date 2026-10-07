@@ -42,13 +42,8 @@ enum layers {
 };
 
 enum custom_keycodes {
-    U_LINT = SAFE_RANGE,
-    U_DEV,
-    U_COLLAPSE,
+    U_COLLAPSE = SAFE_RANGE,
     U_EXPAND,
-    U_LINT_FIX,
-    U_PRE_COMMIT,
-    U_NPM_RUN,
 };
 
 enum tap_dances {
@@ -241,12 +236,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
     if (record->event.pressed) {
         switch (keycode) {
-            case U_LINT:
-                SEND_STRING("lint");
-                break;
-            case U_DEV:
-                SEND_STRING("dev");
-                break;
             case U_COLLAPSE:
                 tap_code16(G(KC_K));
                 tap_code16(G(KC_LBRC));
@@ -254,15 +243,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             case U_EXPAND:
                 tap_code16(G(KC_K));
                 tap_code16(G(KC_RBRC));
-                break;
-            case U_LINT_FIX:
-                SEND_STRING("lint:fix");
-                break;
-            case U_PRE_COMMIT:
-                SEND_STRING("pre-commit");
-                break;
-            case U_NPM_RUN:
-                SEND_STRING("npm run ");
                 break;
         }
     }
@@ -296,7 +276,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_DIR] = LAYOUT_5x6(
         _______,    _______,      _______,    _______,          _______,          _______,                      _______,       _______,       _______,      _______,        _______,       _______,
-        _______,    U_PRE_COMMIT, U_LINT_FIX, U_LINT,           U_DEV,            U_NPM_RUN,                    U_COLLAPSE,    KC_HOME,       KC_UP,        KC_END,         U_EXPAND,      _______,
+        _______,    _______,      _______,    _______,          _______,          _______,                      U_COLLAPSE,    KC_HOME,       KC_UP,        KC_END,         U_EXPAND,      _______,
         _______,    _______,      KC_MPRV,    KC_MPLY,          KC_MNXT,          _______,                      RGUI(KC_LBRC), KC_LEFT,       KC_DOWN,      KC_RIGHT,       LGUI(KC_RBRC), _______,
         _______,    _______,      KC_MUTE,    KC_VOLD,          KC_VOLU,          _______,                      _______,       RALT(KC_LEFT), _______,      RALT(KC_RIGHT), _______,       _______,
                                   _______,    _______,                                                                                        _______,      _______,

@@ -1,8 +1,7 @@
 # dactyl-corne
 
 A QMK keymap for a handwired Dactyl ManuForm 5x6 — a 64-key split
-keyboard, five layers, with tap dances, combos, text macros and a mouse
-layer.
+keyboard, five layers, with tap dances, combos and a mouse layer.
 
 Keymap source:
 [`keyboards/handwired/dactyl_manuform/5x6/keymaps/dactyl_corne/`](keyboards/handwired/dactyl_manuform/5x6/keymaps/dactyl_corne/)
@@ -38,7 +37,8 @@ layer changes the key; grey means it passes through to Base. The two
 layer keys in each thumb cluster are split top and bottom — top is what
 you get on tap, bottom is what you get on hold.
 
-The mouse layer is not on the diagram.
+The mouse toggle key is lime green. The mouse layer's bindings are listed
+as text beside the right thumb cluster.
 
 ## Layers
 
@@ -73,15 +73,7 @@ backtick/tilde, underscore, `#`, `%` and pipe under the left.
 ### Dir
 
 Arrow cluster on I/J/K/L with Home and End beside it. Media transport
-and volume under the left hand. Text macros on the left top row:
-
-| Key | Types        |
-| --- | ------------ |
-| Q   | `pre-commit` |
-| W   | `lint:fix`   |
-| E   | `lint`       |
-| R   | `dev`        |
-| T   | `npm run `   |
+and volume under the left hand.
 
 Y and P send editor fold and unfold (`⌘K ⌘[` and `⌘K ⌘]`).
 

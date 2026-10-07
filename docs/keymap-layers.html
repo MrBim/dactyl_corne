@@ -12,6 +12,7 @@
   --blank-bg:#e2e5e9; --blank-edge:#3a3f47;
   --empty-q: #b8bdc4;
   --sym:#d32f2f; --dir:#2e7d32; --num:#ef6c00;
+  --mouse:#32cd32;
 }
 
 *{box-sizing:border-box;}
@@ -40,6 +41,7 @@ body{
   font-family:ui-monospace,"SF Mono","Cascadia Code",Consolas,monospace;
   font-size:19px; font-weight:900; line-height:1.15; padding:6px;
 }
+.key.solid.mouse{background:var(--mouse); color:var(--ink);}
 .key.blank{background:var(--blank-bg); border:3px dashed var(--blank-edge);}
 .key.quad{
   display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:3px;
@@ -72,6 +74,17 @@ body{
 .split-half.num{background:var(--num); color:var(--ink);}
 
 .thumb{display:grid; grid-template-columns:repeat(2, 120px); grid-template-rows:repeat(2, 120px); gap:10px; margin-top:18px;}
+
+.hand-bottom{display:flex; justify-content:space-between; align-items:flex-start; gap:30px; width:100%;}
+.notes{width:490px; margin-top:18px; font-size:17px; line-height:1.45;}
+.notes h2{
+  display:inline-block; margin:0 0 10px; padding:6px 12px; border-radius:8px;
+  border:3px solid var(--key-edge); background:var(--mouse); color:var(--ink);
+  font-family:ui-monospace,"SF Mono","Cascadia Code",Consolas,monospace;
+  font-size:19px; font-weight:900;
+}
+.notes ul{margin:0; padding-left:20px;}
+.notes b{font-weight:800;}
 </style>
 </head>
 <body>
@@ -82,7 +95,7 @@ body{
     <div class="hand left">
       <div class="finger-rows">
         <div class="krow">
-          <div class="key solid">Mouse<br/>toggle</div>
+          <div class="key solid mouse">Mouse<br/>toggle</div>
           <div class="key solid">1/!</div>
           <div class="key solid">2/@</div>
           <div class="key solid">3/#</div>
@@ -91,11 +104,11 @@ body{
         </div>
         <div class="krow">
           <div class="key solid">Esc</div>
-          <div class="key quad"><div class="q base">Q</div><div class="q sym">1/!</div><div class="q dir">pre-commit</div><div class="q empty"></div></div>
-          <div class="key quad"><div class="q base">W</div><div class="q sym">2/@</div><div class="q dir">lint:fix</div><div class="q empty"></div></div>
-          <div class="key quad"><div class="q base">E</div><div class="q sym">3/#</div><div class="q dir">lint</div><div class="q empty"></div></div>
-          <div class="key quad"><div class="q base">R</div><div class="q sym">4/$</div><div class="q dir">dev</div><div class="q empty"></div></div>
-          <div class="key quad"><div class="q base">T</div><div class="q sym">5/%</div><div class="q dir">npm run</div><div class="q empty"></div></div>
+          <div class="key quad"><div class="q base">Q</div><div class="q sym">1/!</div><div class="q empty"></div><div class="q empty"></div></div>
+          <div class="key quad"><div class="q base">W</div><div class="q sym">2/@</div><div class="q empty"></div><div class="q empty"></div></div>
+          <div class="key quad"><div class="q base">E</div><div class="q sym">3/#</div><div class="q empty"></div><div class="q empty"></div></div>
+          <div class="key quad"><div class="q base">R</div><div class="q sym">4/$</div><div class="q empty"></div><div class="q empty"></div></div>
+          <div class="key quad"><div class="q base">T</div><div class="q sym">5/%</div><div class="q empty"></div><div class="q empty"></div></div>
         </div>
         <div class="krow">
           <div class="key solid">Tab</div>
@@ -158,11 +171,23 @@ body{
           <div class="key solid">Shift</div>
         </div>
       </div>
-      <div class="thumb">
-        <div class="key split"><div class="split-half base">Base</div><div class="split-half num">Num</div></div>
-        <div class="key solid">Space</div>
-        <div class="key solid">Alt</div>
-        <div class="key split"><div class="split-half sym">Sym</div><div class="split-half dir">Dir</div></div>
+      <div class="hand-bottom">
+        <div class="thumb">
+          <div class="key split"><div class="split-half base">Base</div><div class="split-half num">Num</div></div>
+          <div class="key solid">Space</div>
+          <div class="key solid">Alt</div>
+          <div class="key split"><div class="split-half sym">Sym</div><div class="split-half dir">Dir</div></div>
+        </div>
+        <div class="notes">
+          <h2>Mouse layer</h2>
+          <ul>
+            <li><b>Toggle:</b> top-left key. <b>Hold:</b> inner bottom thumb key, either hand.</li>
+            <li><b>Cursor:</b> I, J, K, L, the same directions as the Dir arrows.</li>
+            <li><b>Click:</b> U left, O right.</li>
+            <li><b>Scroll:</b> H up, N down.</li>
+            <li><b>Speed:</b> S slow, D medium, F fast.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
